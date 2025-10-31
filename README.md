@@ -12,6 +12,7 @@
 
 | Section | Description |
 |:--|:--|
+| 🧰 [Hardware & Boot Config](Weekly_Progress/Week_0_Prep/GRUB_DualBoot.md) | BIOS setup, TPM, Secure Boot, GRUB chainload |
 | 🔧 [Proxmox Setup](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md) | Type-1 Proxmox VE installation + base configuration |
 | 🌐 [Networking & Firewalls](Weekly_Progress/Week_3_Firewall_Segmentation.md) | VLANs, pfSense LAN/WAN segmentation, IDS/IPS setup |
 | 🧩 [AI & LLMs](Weekly_Progress/Week_11_LLM_AI/) | Mini-LLM & quantum automation integrations |
@@ -30,7 +31,9 @@ BIOS tuning, ISO creation, hardware checks
 
 - [Assets](Weekly_Progress/Week_0_Prep/_assets/)  
 - [Meta Logs](Weekly_Progress/Week_0_Prep/_meta/)  
-- [README](Weekly_Progress/Week_0_Prep/README.md)  
+- [GRUB Dual Boot Guide](Weekly_Progress/Week_0_Prep/GRUB_DualBoot.md)  
+- [README](Weekly_Progress/Week_0_Prep/README.md)
+ 
 
 ---
 
@@ -39,7 +42,9 @@ BIOS tuning, ISO creation, hardware checks
 Core Proxmox VE installation, base configuration, and storage mounts  
 
 - [Documentation](Weekly_Progress/Week_1_Proxmox_Base/docs/)  
-- [Guide File](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)  
+- [GPU Passthrough Guide](Weekly_Progress/Week_1_Proxmox_Base/docs/Proxmox_GPU_Passthrough.md)  
+- [Hook Scripts](Weekly_Progress/Week_1_Proxmox_Base/config/grub_hook_scripts/)  
+- [Guide File](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)
 
 ---
 
