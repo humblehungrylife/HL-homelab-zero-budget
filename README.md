@@ -24,22 +24,75 @@
 ## ⏱️ Weekly Progress Timeline    
 *Click a week below to open its section.*
 
-- **[Week 0 — Prep](Weekly_Progress/Week_0_Prep/README.md)** — BIOS tuning, ISO creation, hardware checks  
-- **[Week 1 — Proxmox Base](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)** — Core install + storage mounts  
-- **[Week 2 — Core VMs](Weekly_Progress/Week_2_Core_VMs/)** — pfSense, Ubuntu, Kali, GPU passthrough  
-  - [pfSense](Weekly_Progress/Week_2_Core_VMs/pfSense/)  
-  - [Ubuntu Server](Weekly_Progress/Week_2_Core_VMs/Ubuntu_Server/)  
-  - [Ubuntu Desktop](Weekly_Progress/Week_2_Core_VMs/Ubuntu_Desktop/)  
-  - [Kali Server](Weekly_Progress/Week_2_Core_VMs/Kali_Server/)  
-  - [Kali Desktop](Weekly_Progress/Week_2_Core_VMs/Kali_Desktop/)  
-  - [Troubleshooting Index](Weekly_Progress/Week_2_Core_VMs/Troubleshooting_Index.md)  
-- **[Week 3 — Firewall Segmentation](Weekly_Progress/Week_3_Firewall_Segmentation.md)** — VLANs, pfSense rules, IDS/IPS tuning  
-- **[Week 6 — SIEM](Weekly_Progress/Week_6_SIEM/)** — Security Information & Event Management setup   
-- **[Week 7 — Incident Response](Weekly_Progress/Week_7_IR.md)** — Playbooks, forensics, and response workflows  
-- **[Week 8 — Cryptography](Weekly_Progress/Week_8_Cryptography.md)** — Certificates, PKI, encryption labs  
-- **[Week 11 — AI & LLMs](Weekly_Progress/Week_11_LLM_AI/)** — Mini-LLM & automation experiments  
-- **[Week 14 — Automation & IaC](Weekly_Progress/Week_14_Automation_IaC.md)** — Terraform + Ansible integration  
+### 🧩 Week 0 — Prep  
+**Path:** `Weekly_Progress/Week_0_Prep/`  
+BIOS tuning, ISO creation, hardware checks  
 
+- [Assets](Weekly_Progress/Week_0_Prep/_assets/)  
+- [Meta Logs](Weekly_Progress/Week_0_Prep/_meta/)  
+- [README](Weekly_Progress/Week_0_Prep/README.md)  
+
+---
+
+### ⚙️ Week 1 — Proxmox Base  
+**Path:** `Weekly_Progress/Week_1_Proxmox_Base/`  
+Core Proxmox VE installation, base configuration, and storage mounts  
+
+- [Documentation](Weekly_Progress/Week_1_Proxmox_Base/docs/)  
+- [Guide File](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)  
+
+---
+
+### 🧠 Week 2 — Core VMs  
+**Path:** `Weekly_Progress/Week_2_Core_VMs/`  
+pfSense, Ubuntu, Kali, and GPU passthrough setup  
+
+- [pfSense](Weekly_Progress/Week_2_Core_VMs/pfSense/)  
+- [Ubuntu Server](Weekly_Progress/Week_2_Core_VMs/Ubuntu_Server/)  
+- [Ubuntu Desktop](Weekly_Progress/Week_2_Core_VMs/Ubuntu_Desktop/)  
+- [Kali Server](Weekly_Progress/Week_2_Core_VMs/Kali_Server/)  
+- [Kali Desktop](Weekly_Progress/Week_2_Core_VMs/Kali_Desktop/)  
+- [Troubleshooting Index](Weekly_Progress/Week_2_Core_VMs/Troubleshooting_Index.md)  
+
+---
+
+### 🌐 Week 3 — Firewall Segmentation  
+**Path:** `Weekly_Progress/Week_3_Firewall_Segmentation.md`  
+VLANs, pfSense rules, and IDS/IPS tuning  
+
+---
+
+### 🧰 Week 6 — SIEM  
+**Path:** `Weekly_Progress/Week_6_SIEM/`  
+Security Information & Event Management setup  
+
+- [Examples](Weekly_Progress/Week_6_SIEM/examples/)  
+
+---
+
+### 🚨 Week 7 — Incident Response  
+**Path:** `Weekly_Progress/Week_7_IR.md`  
+Playbooks, forensics, and response workflows  
+
+---
+
+### 🔐 Week 8 — Cryptography  
+**Path:** `Weekly_Progress/Week_8_Cryptography.md`  
+Certificates, PKI, and encryption lab  
+
+---
+
+### 🤖 Week 11 — AI & LLMs  
+**Path:** `Weekly_Progress/Week_11_LLM_AI/`  
+Mini-LLM & quantum automation integrations  
+
+- [Monetization](Weekly_Progress/Week_11_LLM_AI/monetization/)  
+
+---
+
+### 🧩 Week 14 — Automation & IaC  
+**Path:** `Weekly_Progress/Week_14_Automation_IaC.md`  
+Terraform and Ansible workflow integrations  
 ---
 
 ## 🧱 Repository Overview
