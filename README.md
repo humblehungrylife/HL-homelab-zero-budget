@@ -24,15 +24,23 @@
 ## ⏱️ Weekly Progress Timeline    
 *Click a week below to open its section.*
 
-- **[Week 0 — Prep](Weekly_Progress/Week_0_Prep/)** — BIOS tuning, ISO creation, hardware checks  
-- **[Week 1 — Proxmox Base](Weekly_Progress/Week_1_Proxmox_Base/)** — Core install + storage mounts  
+- **[Week 0 — Prep](Weekly_Progress/Week_0_Prep/README.md)** — BIOS tuning, ISO creation, hardware checks  
+- **[Week 1 — Proxmox Base](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)** — Core install + storage mounts  
 - **[Week 2 — Core VMs](Weekly_Progress/Week_2_Core_VMs/)** — pfSense, Ubuntu, Kali, GPU passthrough  
-- **[Week 3 — Firewall Segmentation](Weekly_Progress/Week_3_Firewall_Segmentation.md)**  
-- **[Week 6 — SIEM](Weekly_Progress/Week_6_SIEM/)**  
-- **[Week 7 — Incident Response](Weekly_Progress/Week_7_IR.md)**  
-- **[Week 8 — Cryptography](Weekly_Progress/Week_8_Cryptography.md)**  
-- **[Week 11 — AI & LLMs](Weekly_Progress/Week_11_LLM_AI/)**  
-- **[Week 14 — Automation & IaC](Weekly_Progress/Week_14_Automation_IaC.md)**  
+  - [pfSense](Weekly_Progress/Week_2_Core_VMs/pfSense/)  
+  - [Ubuntu Server](Weekly_Progress/Week_2_Core_VMs/Ubuntu_Server/)  
+  - [Ubuntu Desktop](Weekly_Progress/Week_2_Core_VMs/Ubuntu_Desktop/)  
+  - [Kali Server](Weekly_Progress/Week_2_Core_VMs/Kali_Server/)  
+  - [Kali Desktop](Weekly_Progress/Week_2_Core_VMs/Kali_Desktop/)  
+  - [Troubleshooting Index](Weekly_Progress/Week_2_Core_VMs/Troubleshooting_Index.md)  
+- **[Week 3 — Firewall Segmentation](Weekly_Progress/Week_3_Firewall_Segmentation.md)** — VLANs, pfSense rules, IDS/IPS tuning  
+- **[Week 6 — SIEM](Weekly_Progress/Week_6_SIEM/)** — Security Information & Event Management setup  
+  - [Examples](Weekly_Progress/Week_6_SIEM/examples/)  
+- **[Week 7 — Incident Response](Weekly_Progress/Week_7_IR.md)** — Playbooks, forensics, and response workflows  
+- **[Week 8 — Cryptography](Weekly_Progress/Week_8_Cryptography.md)** — Certificates, PKI, encryption labs  
+- **[Week 11 — AI & LLMs](Weekly_Progress/Week_11_LLM_AI/)** — Mini-LLM & automation experiments  
+  - [Monetization](Weekly_Progress/Week_11_LLM_AI/monetization/)  
+- **[Week 14 — Automation & IaC](Weekly_Progress/Week_14_Automation_IaC.md)** — Terraform + Ansible integration  
 
 ---
 
