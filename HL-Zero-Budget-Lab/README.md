@@ -36,7 +36,7 @@ BIOS tuning, ISO creation, hardware checks
 
 ### ⚙️ Week 1 — Proxmox Base  
 **Path:** `Weekly_Progress/Week_1_Proxmox_Base/`  
-Core Proxmox VE installation, base configuration, and storage mounts  
+Core Proxmox VE installation, base configuration, GPU passthrough, storage mounts and network configuration  
 
 - [Documentation](Weekly_Progress/Week_1_Proxmox_Base/docs/)  
 - [Guide File](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)  
