@@ -66,7 +66,7 @@ VLANs, pfSense rules, and IDS/IPS tuning
 **Path:** `Weekly_Progress/Week_6_SIEM/`  
 Security Information & Event Management setup  
 
-- [Examples](Weekly_Progress/Week_6_SIEM/examples/)  
+- [Examples](examples/)  
 
 ---
 
@@ -74,11 +74,16 @@ Security Information & Event Management setup
 **Path:** `Weekly_Progress/Week_7_IR.md`  
 Playbooks, forensics, and response workflows  
 
+- [Ansible Playbooks](examples/Ansible_Playbooks/)  
+- [Jupyter Notebooks](examples/Jupyter/)  
+
 ---
 
 ### 🔐 Week 8 — Cryptography  
 **Path:** `Weekly_Progress/Week_8_Cryptography.md`  
 Certificates, PKI, and encryption lab  
+
+- [Scripts](examples/Scripts/)  
 
 ---
 
@@ -86,6 +91,7 @@ Certificates, PKI, and encryption lab
 **Path:** `Weekly_Progress/Week_11_LLM_AI/`  
 Mini-LLM & quantum automation integrations  
 
+- [AI Lab](examples/AI_Lab/)  
 - [Monetization](Weekly_Progress/Week_11_LLM_AI/monetization/)  
 
 ---
@@ -93,6 +99,10 @@ Mini-LLM & quantum automation integrations
 ### 🧩 Week 14 — Automation & IaC  
 **Path:** `Weekly_Progress/Week_14_Automation_IaC.md`  
 Terraform and Ansible workflow integrations  
+
+- [Terraform](examples/Terraform/)  
+- [Portfolio](examples/Portfolio/)  
+
 ---
 
 ## 🧱 Repository Overview
@@ -102,7 +112,9 @@ Terraform and Ansible workflow integrations
 | `_config/` | Security + setup scripts |
 | `_meta/` | Logs + snapshots + session notes |
 | `docs/` | Hardware + topology + backups |
-| `Weekly_Progress/` | Core weekly development timeline |
+| `Weekly_Progress/` | Core week-by-week documentation |
+| `examples/` | Reusable playbooks, Jupyter notebooks, scripts, and IaC templates |
+| `Resources/` | Hardware layout, storage plan, risk mitigation, monetization roadmap |
 
 ---
 
@@ -134,3 +146,11 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 [💻 GitHub Profile](https://github.com/humblehungrylife)  |  🔗 LinkedIn *(coming soon)*  |  ✉️ Email *(after business contact ready)*  
 
 </div>
+
+---
+
+### ✅ What’s New (Sync v1.3)
+- Integrated **new Examples structure** (`Ansible_Playbooks`, `Jupyter`, `Terraform`, `AI_Lab`, `Scripts`, `Portfolio`)  
+- Added **Resources folder** (Hardware_Layout.md, Storage_Structure.md, Risk_Mitigation_Checklist.md, Monetization_Roadmap.md)  
+- All paths now fully reflect your PowerShell automation layout  
+- Verified internal linking for GitHub rendering (no 404s)  
