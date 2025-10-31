@@ -147,10 +147,4 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 </div>
 
----
-
-### ✅ What’s New (Sync v1.4)  
-- Fixed all **404 link paths** to match GitHub’s case-sensitive structure  
-- Verified all subfolder references (examples, resources, docs)  
-- Streamlined prep and week navigation for web readability  
-- Confirmed MIT License + hybrid privacy notice alignment  
+--- 
