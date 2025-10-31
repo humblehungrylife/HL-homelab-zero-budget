@@ -1,0 +1,73 @@
+# HL Zero-Budget Lab - .gitignore
+
+# Private/Sensitive Files
+*.key
+*.pem
+*.pfx
+*.p12
+*password*
+*secret*
+*credential*
+.env
+.env.local
+
+# Personal Notes
+_personal/
+*personal*
+*private*
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# VM Files (if storing locally)
+*.qcow2
+*.vmdk
+*.vdi
+*.iso
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Ansible
+*.retry
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
