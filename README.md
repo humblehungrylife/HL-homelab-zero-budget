@@ -34,12 +34,10 @@
   - [Kali Desktop](Weekly_Progress/Week_2_Core_VMs/Kali_Desktop/)  
   - [Troubleshooting Index](Weekly_Progress/Week_2_Core_VMs/Troubleshooting_Index.md)  
 - **[Week 3 — Firewall Segmentation](Weekly_Progress/Week_3_Firewall_Segmentation.md)** — VLANs, pfSense rules, IDS/IPS tuning  
-- **[Week 6 — SIEM](Weekly_Progress/Week_6_SIEM/)** — Security Information & Event Management setup  
-  - [Examples](Weekly_Progress/Week_6_SIEM/examples/)  
+- **[Week 6 — SIEM](Weekly_Progress/Week_6_SIEM/)** — Security Information & Event Management setup   
 - **[Week 7 — Incident Response](Weekly_Progress/Week_7_IR.md)** — Playbooks, forensics, and response workflows  
 - **[Week 8 — Cryptography](Weekly_Progress/Week_8_Cryptography.md)** — Certificates, PKI, encryption labs  
 - **[Week 11 — AI & LLMs](Weekly_Progress/Week_11_LLM_AI/)** — Mini-LLM & automation experiments  
-  - [Monetization](Weekly_Progress/Week_11_LLM_AI/monetization/)  
 - **[Week 14 — Automation & IaC](Weekly_Progress/Week_14_Automation_IaC.md)** — Terraform + Ansible integration  
 
 ---
