@@ -32,8 +32,7 @@ BIOS tuning, ISO creation, hardware checks
 - [Assets](Weekly_Progress/Week_0_Prep/_assets/)  
 - [Meta Logs](Weekly_Progress/Week_0_Prep/_meta/)  
 - [GRUB Dual Boot Guide](Weekly_Progress/Week_0_Prep/GRUB_DualBoot.md)  
-- [README](Weekly_Progress/Week_0_Prep/README.md)
- 
+- [README](Weekly_Progress/Week_0_Prep/README.md)  
 
 ---
 
@@ -44,7 +43,7 @@ Core Proxmox VE installation, base configuration, and storage mounts
 - [Documentation](Weekly_Progress/Week_1_Proxmox_Base/docs/)  
 - [GPU Passthrough Guide](Weekly_Progress/Week_1_Proxmox_Base/docs/Proxmox_GPU_Passthrough.md)  
 - [Hook Scripts](Weekly_Progress/Week_1_Proxmox_Base/config/grub_hook_scripts/)  
-- [Guide File](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)
+- [Guide File](Weekly_Progress/Week_1_Proxmox_Base/Week_1_Proxmox_Base.md)  
 
 ---
 
@@ -123,9 +122,9 @@ Terraform and Ansible workflow integrations
 
 ---
 
-## 🧩 About the Project
-The **HL Zero-Budget Lab** is designed to simulate a modern SOC + AI research environment entirely on personal hardware.  
-Each phase documents the build process — from BIOS prep to GPU passthrough — while maintaining a **hybrid public/private model** for security and monetization.
+## 🧩 About the Project  
+The **HL Zero-Budget Lab** simulates a modern SOC + AI research environment entirely on personal hardware.  
+Each phase documents the build process —from BIOS prep to GPU passthrough — while maintaining a **hybrid public/private model** for security and monetization.  
 
 ---
 
@@ -133,29 +132,29 @@ Each phase documents the build process — from BIOS prep to GPU passthrough —
 
 | Branch | Purpose |
 |:--|:--|
-| **`main`** | Public — documentation, sanitized configs, learning resources (MIT-licensed) |
-| **`lab-private`** | Private — sensitive configs, logs, automation playbooks (proprietary/not for redistribution) |
+| **`main`** | Public — docs, sanitized configs (MIT-licensed) |
+| **`lab-private`** | Private — sensitive configs & automation (proprietary) |
 
-> Certain configurations, datasets, and proprietary materials are **not** covered under the MIT License and remain confidential.
+> Certain configurations, datasets, and proprietary materials are **not** covered under the MIT License and remain confidential.  
 
 ---
 
 ## ⚖️ License  
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file.  
 
 ---
 
 <div align="center">
 
-### 🤝 Connect
+### 🤝 Connect  
 [💻 GitHub Profile](https://github.com/humblehungrylife)  |  🔗 LinkedIn *(coming soon)*  |  ✉️ Email *(after business contact ready)*  
 
 </div>
 
 ---
 
-### ✅ What’s New (Sync v1.3)
-- Integrated **new Examples structure** (`Ansible_Playbooks`, `Jupyter`, `Terraform`, `AI_Lab`, `Scripts`, `Portfolio`)  
-- Added **Resources folder** (Hardware_Layout.md, Storage_Structure.md, Risk_Mitigation_Checklist.md, Monetization_Roadmap.md)  
-- All paths now fully reflect your PowerShell automation layout  
-- Verified internal linking for GitHub rendering (no 404s)  
+### ✅ What’s New (Sync v1.3)  
+- Integrated **Examples structure** (`Ansible_Playbooks`, `Jupyter`, `Terraform`, `AI_Lab`, `Scripts`, `Portfolio`)  
+- Added **Resources folder** (`Hardware_Layout.md`, `Storage_Structure.md`, `Risk_Mitigation_Checklist.md`, `Monetization_Roadmap.md`)  
+- All paths fully reflect PowerShell automation layout  
+- Verified internal linking for GitHub rendering (✅ no 404s)  
