@@ -1,1 +1,22 @@
+# 🧱 Stage 0 — Preparation
+
+This folder contains all **hardware and BIOS preparation steps** required before installing Proxmox VE.
+
+---
+
+## 📄 File Index
+
+| File | Description |
+|:--|:--|
+| `01_Hardware_and_BIOS_Prep.txt` | Detailed guide to prepare your system hardware, BIOS/UEFI, thermals, and storage health before Proxmox setup. |
+
+---
+
+## ⚙️ Summary
+- Update BIOS and enable virtualization (VT-d / AMD-Vi, IOMMU, SR-IOV).  
+- Disable legacy boot and enable UEFI-only mode.  
+- Run thermal and SMART checks to verify system stability.  
+- Confirm all cooling, fans, and PSU are stable before Stage 1.
+
+✅ **Next:** Proceed to [../GRUB](../GRUB) for optional dual-boot setup.
 
