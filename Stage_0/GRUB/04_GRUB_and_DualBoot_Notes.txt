@@ -1,2 +1,0 @@
-﻿# 🧩 Stage 0 — GRUB and Dual-Boot Notes
-(Your GRUB / os-prober / update-grub / recovery steps go here)
