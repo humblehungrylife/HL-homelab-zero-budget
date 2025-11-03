@@ -17,7 +17,7 @@ Ubuntu Desktop provides a **GUI environment** within the internal LAN network, u
 | Memory | 12 GB |
 | Disk | 128 GB (on HDD_8TB) |
 | Network Device 1 | **vnet0 → vmbr1 (LAN)** |
-| Display | Default (SPICE or VGA) |
+| Display | Default (**VGA = std**) |
 | Audio Device | Intel HDA (ICH9) |
 
 > Ensure **Network Device → vmbr1 (LAN)** for pfSense connectivity (10.0.0.x subnet).
@@ -66,6 +66,8 @@ If sound doesn’t work immediately:
 - Test using YouTube or a local media file.  
 - You can change the audio output in **Settings → Sound → Output → Intel HDA**.
 
+> ⚠️ **Note:** Without a Bluetooth dongle, you may not get proper audio playback inside VMs.
+
 ---
 
 ## 🌐 5. Connectivity Verification
@@ -96,7 +98,36 @@ If not reachable, run `pfctl -d` inside pfSense temporarily.
 
 ---
 
-## 💾 7. Update & Snapshot
+## 🎮 7. GPU Passthrough (Optional)
+
+If enabling GPU passthrough for Ubuntu Desktop:
+
+| PCI Device | Description | Action |
+|:------------|:-------------|:--------|
+| `0000:03:00` | AMD GPU (Display) | ✅ Check all defaults |
+| `0000:03:01` | AMD GPU (Audio) | ❌ Uncheck all flags (ROM-bar, primary GPU, etc.) |
+
+**Display Type:** keep set to **VGA = std**  
+Do **not** change to `none`, or Proxmox may lose console output.
+
+### Audio via GPU
+- Use a **Bluetooth dongle** for reliable audio output.  
+- HDMI/DisplayPort audio from the GPU may not work without passthrough isolation.
+
+### Switching Between GPU VMs
+To safely switch between GPU-using VMs (e.g., Ubuntu ↔ Kali):
+
+```bash
+qm stop 102 && sleep 10
+```
+
+Then start the next GPU VM (e.g., `qm start 104`).
+
+> This ensures the GPU resets cleanly between VMs and avoids black screens or freezes.
+
+---
+
+## 💾 8. Update & Snapshot
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -108,7 +139,7 @@ Then in Proxmox:
 
 Name:
 ```
-Week2_Ubuntu_Desktop_Stable
+Week2_Ubuntu_Desktop_GPU_Ready
 ```
 
 ---
@@ -116,8 +147,9 @@ Week2_Ubuntu_Desktop_Stable
 ✅ **Status:** Stable  
 - Connected to LAN (10.0.0.x)  
 - Internet verified (ping 8.8.8.8 & google.com)  
-- Audio + Bluetooth functional after restart  
-- QEMU agent installed  
+- Audio + Bluetooth functional after reboot  
+- GPU passthrough verified (003:00 + 003:01 setup)  
+- Safe switching command included  
 - Snapshot taken for rollback  
 
 ---
