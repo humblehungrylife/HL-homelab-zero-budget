@@ -1,0 +1,47 @@
+# 🧩 Stage 0 — GRUB and Dual-Boot Setup
+
+This folder covers **safe GRUB configuration and dual-boot preparation** for systems that run Proxmox VE alongside another OS (e.g., Windows 11 or Ubuntu).
+
+---
+
+## 📄 File Index
+
+| File | Description |
+|:--|:--|
+| `02_GRUB_and_DualBoot_Notes.txt` | Complete dual-boot guide — enabling OS detection, updating GRUB, and recovery commands if the bootloader breaks. |
+
+---
+
+## ⚙️ Summary
+- Install and enable `os-prober` for automatic OS detection.  
+- Update GRUB safely to include Windows or other OS drives.  
+- Use recovery commands to restore boot if EFI entries break.  
+- Keep Proxmox and Windows on separate NVMe drives for safety.
+
+---
+
+## ⚙️ Bootloader Setup (from Stage 1 Reference)
+
+If running **Proxmox alongside another OS (e.g., Windows 11)**, enable GRUB OS detection inside Proxmox after installation:
+
+```bash
+apt update
+apt install -y os-prober
+nano /etc/default/grub
+# Add or un-comment:
+GRUB_DISABLE_OS_PROBER=false
+update-grub
+```
+
+Expected output:
+```
+Found Windows Boot Manager on /dev/nvme1n1p1
+done
+```
+
+For full recovery and EFI-backup instructions, see:
+👉 `Lab_Stages/Stage_0/GRUB/02_GRUB_and_DualBoot_Notes.txt`
+
+---
+
+✅ **After this:** Continue to **Stage 1 – Proxmox Base Setup** in your [Lab_Stages](../../Stage_1_Proxmox_Base) folder.
