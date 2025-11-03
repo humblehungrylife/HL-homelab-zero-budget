@@ -1,7 +1,7 @@
 # 🧱 Stage 2 — Core VM Setup: pfSense (VM 101)
 
-This document details the **pfSense firewall setup** for the HL Zero-Budget Homelab project.  
-pfSense acts as the network gateway and firewall between the WAN (home router) and LAN (internal VMs).
+This document details the **pfSense firewall setup** for the HL Zero‑Budget Homelab project.  
+pfSense acts as the secure network gateway and firewall between the WAN (home router) and LAN (internal VMs).
 
 ---
 
@@ -22,17 +22,17 @@ pfSense acts as the network gateway and firewall between the WAN (home router) a
 | Display | Default (VGA) |
 
 ✅ Confirm bridge mapping before booting:  
-- **vmbr0 → WAN (Home Router)**  
-- **vmbr1 → LAN (Internal Network)**
+- **vmbr0 → WAN (connected to router)**  
+- **vmbr1 → LAN (internal network)**
 
 ---
 
-## 🧩 2. pfSense Installation Steps
+## 🧩 2. Installation Steps
 
-1. Boot the pfSense ISO.
-2. Choose **Install pfSense (Quick/Default)**.
-3. Select default keymap and install to your 32 GB virtual disk.
-4. Once installation completes, pfSense will reboot automatically.
+1. Boot the pfSense ISO.  
+2. Choose **Install pfSense (Quick/Default)**.  
+3. Select default keymap and install to your virtual disk.  
+4. When installation completes, pfSense reboots automatically.
 
 ---
 
@@ -45,18 +45,18 @@ Once pfSense reboots into the console menu, type:
 ```
 to **Assign Interfaces**.
 
-Follow these exact steps:
+Follow these steps:
 
 1. **Assign LAN first**, then WAN.  
-2. When prompted:
-   - **Enter interface name for LAN:** → `vtnet1`
-   - **Enter interface name for WAN:** → `vtnet0`
-3. For all other prompts, just press **Enter** to skip (no VLANs or additional interfaces needed).
+2. When prompted:  
+   - **LAN:** `vtnet1`  
+   - **WAN:** `vtnet0`  
+3. For all other prompts, just press **Enter** to skip (no VLANs).  
 4. Confirm configuration when asked.
 
 pfSense will then assign:
 - **LAN (vtnet1)** → Static 10.0.0.1/24  
-- **WAN (vtnet0)** → DHCP (from your home router, e.g., 192.168.1.70)
+- **WAN (vtnet0)** → DHCP (from your router)
 
 ---
 
@@ -68,10 +68,10 @@ From your Proxmox shell, temporarily disable the pfSense firewall to allow LAN c
 pfctl -d
 ```
 
-> This command is essential for **first-time access** to the WebGUI.  
-> Once inside and setup is complete, pfSense automatically re-enables its firewall.
+> This command is needed **only once** during initial setup to reach the WebGUI.  
+> pfSense automatically re-enables its firewall after configuration.
 
-Now access the WebGUI from your host browser or LAN VM:
+Then access the WebGUI from your host browser or LAN VM:
 
 ```
 https://10.0.0.1
@@ -87,19 +87,20 @@ Password: pfsense
 
 ## 💡 5. Initial WebGUI Setup
 
-1. Complete the Setup Wizard:
-   - Hostname: `pfsense`
-   - Domain: `local.lan`
-   - Primary DNS: `8.8.8.8`
-   - WAN: DHCP
-   - LAN: 10.0.0.1/24
-   - Admin password: (set your own)
+Complete the Setup Wizard:
 
-2. Allow pfSense to reload and apply all settings.
+- Hostname: `pfsense`  
+- Domain: `local.lan`  
+- Primary DNS: `8.8.8.8`  
+- WAN: DHCP  
+- LAN: 10.0.0.1/24  
+- Set your own admin password
+
+Let pfSense apply and reload.
 
 ---
 
-## 🧱 6. Verify Internet & LAN Connectivity
+## 🧱 6. Verify LAN & Internet Connectivity
 
 From pfSense shell:
 
@@ -107,7 +108,7 @@ From pfSense shell:
 ping 8.8.8.8
 ```
 
-From Ubuntu Server (once installed next):
+From Ubuntu Server (VM 102, next setup):
 
 ```bash
 ping 10.0.0.1
@@ -115,39 +116,69 @@ ping 8.8.8.8
 ```
 
 ✅ Expected results:
-- pfSense WAN obtains IP from router (192.168.1.x)
-- pfSense LAN gateway reachable (10.0.0.1)
-- LAN → Internet connectivity confirmed
+- pfSense WAN gets DHCP IP from your router  
+- LAN gateway reachable (10.0.0.1)  
+- LAN → Internet connection working
 
 ---
 
-## 🔁 7. Create a Snapshot
+## 🔧 7. Safe Firewall & Access Rules
 
-Once pfSense WebGUI and network are verified:
+After confirming Internet access, apply these **minimal safe rules**:
+
+### LAN Rules (allow traffic to WAN and pfSense GUI)
+Navigate to **Firewall → Rules → LAN** and ensure the following rule exists:
+
+| Action | Interface | Source | Destination | Protocol | Description |
+|:--|:--|:--|:--|:--|:--|
+| ✅ Pass | LAN | LAN net | any | any | Allow LAN → any |
+
+> This rule allows internal LAN VMs to access the Internet and the pfSense GUI.  
+> The GUI remains *accessible only from LAN* — not from WAN.
+
+### WAN Access (block management by default)
+- Go to **System → Advanced → Admin Access**  
+- Confirm that “WebGUI accessible from WAN” is **unchecked**  
+- Keep management restricted to LAN only
+
+### DHCP & DNS
+Enable LAN DHCP for VM automation:
+- **Services → DHCP Server → LAN**
+  - Range example: `10.0.0.50 – 10.0.0.200`
+- **Services → DNS Resolver → Enable DNS Resolver** (keep defaults)
+
+### ICMP (Ping)
+- **Firewall → Rules → LAN → Add**
+  - Action: Pass  
+  - Protocol: ICMP  
+  - Source: LAN net  
+  - Destination: any  
+  - Description: “Allow ICMP (Ping) LAN → Any”
+
+> These safe rules maintain LAN access, internal DNS, and diagnostics, while keeping WAN management locked out.
+
+---
+
+## 🔁 8. Snapshot
+
+Once verified, take a Proxmox snapshot:
 
 **Proxmox → VM 101 → Snapshots → Take Snapshot**
 
-Name it:
+Name:
 ```
-Week1_pfSense_Stable_No_pfctl
+Week1_pfSense_Stable_SecureRules
 ```
-
-> This ensures you can always roll back before testing new rules or firewall changes.
 
 ---
 
-## ⚙️ 8. Important Next Step
-
-Install **Ubuntu Server (VM 102)** next — it is required to provide LAN Internet access for other VMs.  
-Ubuntu Server will serve as your first LAN client and connectivity test point.
-
----
-
-✅ **Status:** Stable  
+✅ **Final Status:**  
 - pfSense fully installed and configured  
-- pfctl -d verified for initial WebGUI access  
-- LAN configured first during interface setup (vtnet1 → LAN, vtnet0 → WAN)  
-- WebGUI reachable at https://10.0.0.1  
-- Ready for Ubuntu Server deployment (next stage)
+- LAN configured first (vtnet1 → LAN, vtnet0 → WAN)  
+- WebGUI restricted to LAN only  
+- DHCP, DNS, and ICMP active on LAN  
+- WAN management blocked (secure)  
+- Internet access verified  
+- Snapshot created for rollback  
 
 ---
