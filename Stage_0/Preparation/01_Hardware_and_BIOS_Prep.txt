@@ -1,0 +1,2 @@
+﻿# 🧱 Stage 0 — Hardware and BIOS Preparation
+(Your hardware, BIOS/UEFI, thermal, SMART, and stability steps go here)
