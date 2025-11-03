@@ -1,2 +1,59 @@
-Repository Tree
-(Lab_Stages ? Stages 0�7)
+homelab-zero-budget/
+│
+├── LICENSE
+├── README.md
+│
+├── 00_Documentation/
+│   ├── Project_Overview.md
+│   ├── Hardware_Inventory.md
+│   ├── Network_Topology.md
+│   ├── Backup_Strategy.md
+│   ├── Risk_Mitigation.md
+│   └── Monetization_Plan.md
+│
+├── 01_Proxmox_Setup/
+│   ├── GPU_Passthrough/
+│   │   └── README.md
+│   ├── Network_Configs/
+│   │   └── README.md
+│   ├── Screenshots_Topology/
+│   │   └── README.md
+│   └── Storage_Mount/
+│       └── README.md
+│
+├── 02_Stage_2_Core_VMs/
+│   ├── 01_pfSense/
+│   │   └── README.md
+│   ├── 02_Ubuntu_Server/
+│   │   └── README.md
+│   ├── 03_Ubuntu_Desktop/
+│   │   └── README.md
+│   ├── 04_Kali_Server/
+│   │   └── README.md
+│   ├── 05_Kali_Desktop/
+│   │   └── README.md
+│   ├── Troubleshooting_Index.md
+│   └── README.md
+│
+├── 03_Snapshots_And_Recovery/
+│   ├── Snapshot_List.md
+│   ├── Recovery_Procedure.md
+│   └── Backup_Verification.md
+│
+├── 04_Future_Expansions/
+│   ├── Windows_Server_2022_ADDS.md
+│   ├── Wazuh_SIEM_Stack.md
+│   ├── Splunk_Lab.md
+│   ├── Velociraptor_IR.md
+│   └── AI_Lab_Integration.md
+│
+├── Screenshots/
+│   ├── BIOS/
+│   ├── Proxmox_Dashboard/
+│   ├── pfSense_Interface/
+│   └── VMs/
+│
+└── notes_archive/
+    ├── commands_reference.txt
+    ├── backup_log.txt
+    └── version_history.md
