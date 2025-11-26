@@ -1,4 +1,4 @@
-# 🧠 HL Zero-Budget Cybersecurity & AI Lab  
+# 🧠 HL Zero-Budget Cybersecurity & AI Lab  A+
 *A self-hosted homelab for cybersecurity, AI experimentation, and automation.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
